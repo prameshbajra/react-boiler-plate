@@ -1,15 +1,23 @@
-const Helloer = React.createClass({
-    render: () => {
+const Invite = React.createClass({
+    getDefaultProps: function () {
+        return {
+            name: "Pramesh"
+        }
+    },
+    render: function () {
         return (
             <div>
-                <h1>Suzal hero nai xa</h1>
-                <p>Bajracharya haru sapai hero nai hunnxa !</p>
+                <h1>{this.props.name}</h1>
+                <h1>{this.props.message}</h1>
             </div>
         );
     }
 });
 
+
+const message = "Suzal is super cool !";
+
 ReactDOM.render(
-    <Helloer />,
+    <Invite name="LOL" message={message} />,
     document.getElementById("app")
 );
