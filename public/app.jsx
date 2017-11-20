@@ -4,56 +4,45 @@ const MessageDisplay = React.createClass({
         const message = this.props.message;
         return (
             <div>
-                <h1>Hello {name}!</h1>
-                <p>Hello {message}</p>
+                <h1>{name}</h1>
+                <h6>{message}</h6>
             </div>
         );
     }
-})
+});
 
 const FormDisplay = React.createClass({
-    handleForm: function (e) {
+    formHandler: function (e) {
         e.preventDefault();
-        const name = this.refs.inputName.value;
-        if (name.length > 0) {
-            this.refs.inputName.value = "";
+        const name = this.refs.name.value;
+        const message = this.refs.message.value;
+        if (name.length > 0 && message.length > 0) {
+            this.refs.name.value = "";
+            this.refs.message.value = "";
             this.props.onNewName(name);
-        }
-
-    },
-    handleFormMessage: function (e) {
-        e.preventDefault();
-        const message = this.refs.messageData.value;
-        if (message.length > 1) {
-            this.refs.messageData.value = "";
             this.props.onNewMessage(message);
         }
     },
     render: function () {
         return (
             <div>
-                <form onSubmit={this.handleForm}>
-                    <input type="text" ref="inputName" />
-                    <button>Set name</button>
-                </form>
-                <form onSubmit={this.handleFormMessage}>
-                    <input type="text" ref="messageData" />
-                    <button>Set message</button>
+                <form onSubmit={this.formHandler}>
+                    <input type="text" ref="name" required /><br />
+                    <input type="text" ref="message" required /><br />
+                    <button>Submit</button>
                 </form>
             </div>
         );
     }
 });
 
-const Invite = React.createClass({
-    // Props bata data pass vayena vanney you default value hunnxa ...
+const MainComponent = React.createClass({
     getDefaultProps: function () {
         return {
-            name: "Pramesh",
+            name: "Suzal",
             message: "Bajracharya"
-        }
+        };
     },
-    // State ko lai initial you tala ko method hunnxa ...
     getInitialState: function () {
         return {
             name: this.props.name,
@@ -65,9 +54,9 @@ const Invite = React.createClass({
             name: name
         });
     },
-    getNewMessage: function (messageData) {
+    getNewMessage: function (message) {
         this.setState({
-            message: messageData
+            message: message
         });
     },
     render: function () {
@@ -81,6 +70,6 @@ const Invite = React.createClass({
 });
 
 ReactDOM.render(
-    <Invite />,
+    <MainComponent />,
     document.getElementById("app")
 );
