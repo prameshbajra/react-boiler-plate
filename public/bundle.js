@@ -19221,6 +19221,13 @@ var MainComponent = function (_React$Component) {
         _this.getNewMessage = _this.getNewMessage.bind(_this);
         return _this;
     }
+    // static get defaultProps() {
+    //     return {
+    //         name: "Suzal",
+    //         message: "Bajracharya"
+    //     }
+    // }
+
 
     _createClass(MainComponent, [{
         key: "getNewName",
@@ -19246,20 +19253,17 @@ var MainComponent = function (_React$Component) {
                 _react2.default.createElement(_FormDisplay2.default, { onNewName: this.getNewName, onNewMessage: this.getNewMessage })
             );
         }
-    }], [{
-        key: "defaultProps",
-        get: function get() {
-            return {
-                name: "Suzal",
-                message: "Bajracharya"
-            };
-        }
     }]);
 
     return MainComponent;
 }(_react2.default.Component);
 
 ;
+
+MainComponent.defaultProps = {
+    name: "Suzal",
+    message: "Bajracharya haru sappai hero hunnxa !!"
+};
 
 exports.default = MainComponent;
 
