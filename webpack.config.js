@@ -5,10 +5,16 @@ module.exports = {
         filename: "./public/bundle.js"
     },
     resolve: {
-        extensions: [".js", ".jsx"]
+        modules: [__dirname, "node_modules"],
+        alias: {
+            FormDisplay: "public/components/FormDisplay.jsx",
+            MainComponent: "public/components/MainComponent.jsx",
+            MessageDisplay: "public/components/MessageDisplay.jsx"
+        },
+        extensions: ["*", ".js", ".jsx"]
     },
     module: {
-        loaders: [{
+        rules: [{
             loader: "babel-loader",
             query: {
                 presets: ["react", "env"]

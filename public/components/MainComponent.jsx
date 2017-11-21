@@ -1,6 +1,6 @@
 import React from "react";
-import MessageDisplay from "./MessageDisplay";
-import FormDisplay from "./FormDisplay";
+import MessageDisplay from "MessageDisplay";
+import FormDisplay from "FormDisplay";
 
 class MainComponent extends React.Component {
     constructor(props) {
