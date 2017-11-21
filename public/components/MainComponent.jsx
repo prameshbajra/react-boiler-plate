@@ -1,31 +1,34 @@
-const createReactClass = require("create-react-class");
-const MessageDisplay = require("./MessageDisplay");
-const FormDisplay = require("./FormDisplay");
+import React from "react";
+import MessageDisplay from "./MessageDisplay";
+import FormDisplay from "./FormDisplay";
 
-const MainComponent = createReactClass({
-    getDefaultProps: function () {
+class MainComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: this.props.name,
+            message: this.props.message
+        };
+        this.getNewName = this.getNewName.bind(this);
+        this.getNewMessage = this.getNewMessage.bind(this);
+    }
+    static get defaultProps() {
         return {
             name: "Suzal",
             message: "Bajracharya"
-        };
-    },
-    getInitialState: function () {
-        return {
-            name: this.props.name,
-            message: this.props.message
         }
-    },
-    getNewName: function (name) {
+    }
+    getNewName(name) {
         this.setState({
             name: name
         });
-    },
-    getNewMessage: function (message) {
+    }
+    getNewMessage(message) {
         this.setState({
             message: message
         });
-    },
-    render: function () {
+    }
+    render() {
         return (
             <div>
                 <MessageDisplay name={this.state.name} message={this.state.message} />
@@ -33,6 +36,6 @@ const MainComponent = createReactClass({
             </div>
         );
     }
-});
+};
 
-module.exports = MainComponent;
+export default MainComponent;

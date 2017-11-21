@@ -1,7 +1,11 @@
-const createReactClass = require("create-react-class");
+import React from "react";
 
-const FormDisplay = createReactClass({
-    formHandler: function (e) {
+class FormDisplay extends React.Component {
+    constructor(props) {
+        super(props);
+        this.formHandler = this.formHandler.bind(this);
+    }
+    formHandler(e) {
         e.preventDefault();
         const name = this.refs.name.value;
         const message = this.refs.message.value;
@@ -11,8 +15,8 @@ const FormDisplay = createReactClass({
             this.props.onNewName(name);
             this.props.onNewMessage(message);
         }
-    },
-    render: function () {
+    }
+    render() {
         return (
             <div>
                 <form onSubmit={this.formHandler}>
@@ -23,6 +27,6 @@ const FormDisplay = createReactClass({
             </div>
         );
     }
-});
+};
 
-module.exports = FormDisplay;
+export default FormDisplay;

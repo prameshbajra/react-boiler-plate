@@ -1,7 +1,10 @@
-const createReactClass = require("create-react-class");
+import React from "react"
 
-const MessageDisplay = createReactClass({
-    render: function () {
+class MessageDisplay extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
         const name = this.props.name;
         const message = this.props.message;
         return (
@@ -11,6 +14,6 @@ const MessageDisplay = createReactClass({
             </div>
         );
     }
-});
+};
 
-module.exports = MessageDisplay;
+export default MessageDisplay;

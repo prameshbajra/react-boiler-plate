@@ -1,7 +1,7 @@
-const createReactClass = require("create-react-class");
-const React = require("react");
-const ReactDOM = require("react-dom");
-const MainComponent = require("./components/MainComponent");
+import createReactClass from "create-react-class";
+import React from "react";
+import ReactDOM from "react-dom";
+import MainComponent from "./components/MainComponent";
 
 
 ReactDOM.render(
