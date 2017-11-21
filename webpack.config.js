@@ -1,5 +1,5 @@
 module.exports = {
-    entry: "./public/app.jsx",
+    entry: "./app/app.jsx",
     output: {
         path: __dirname,
         filename: "./public/bundle.js"
@@ -7,9 +7,7 @@ module.exports = {
     resolve: {
         modules: [__dirname, "node_modules"],
         alias: {
-            FormDisplay: "public/components/FormDisplay.jsx",
-            MainComponent: "public/components/MainComponent.jsx",
-            MessageDisplay: "public/components/MessageDisplay.jsx"
+            // Add key value pair for your imports ...
         },
         extensions: ["*", ".js", ".jsx"]
     },
