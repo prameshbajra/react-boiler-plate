@@ -1,8 +1,2 @@
-# React Boiler Plate
-
-Making it easy to get on with react later on. 
-- No webpack configurations
-- no linting configurations
-- no git configurations
-
-> All happiness :D
+# re-weather-act
+A simple weather app to that uses apis to get weather data and covers basic react in whole.
