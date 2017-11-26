@@ -24,14 +24,6 @@ module.exports = {
         alias: {
             // Add key value pair for your imports ...
             MainComponent: "app/components/MainComponent.jsx",
-            NavComponent: "app/components/NavComponent.jsx",
-            WeatherComponent: "app/components/WeatherComponent.jsx",
-            AboutComponent: "app/components/AboutComponent.jsx",
-            ExamplesComponent: "app/components/ExamplesComponent.jsx",
-            GetWeatherFormComponent: "app/components/GetWeatherFormComponent.jsx",
-            GetWeatherDataComponent: "app/components/GetWeatherDataComponent.jsx",
-            OpenWeatherMap: "app/apis/OpenWeatherMap.jsx",
-            ErrorComponent: "app/components/ErrorComponent.jsx",
 
             ApplicationStyles: "app/styles/app.scss"
         },
