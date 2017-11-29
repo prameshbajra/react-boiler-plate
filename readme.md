@@ -1,10 +1,13 @@
-# React Boilder plate
+# react-down-timer
 
+Timer app using React.
 
-### Steps to use :
+### How to use ?
 
-- `npm install`
+- `npm install` to install required **node_modules**
 
-- `nodemon server.js` or `node server.js`
+- `nodemon server.js` or `node server.js` to fire up the server.
 
-- `webpack -w`
+- `webpack -w` generate **bundle.js**
+
+In browser : `localhost:3000` and **You're Done!**

@@ -24,7 +24,7 @@ module.exports = {
         alias: {
             // Add key value pair for your imports ...
             MainComponent: "app/components/MainComponent.jsx",
-
+           
             ApplicationStyles: "app/styles/app.scss"
         },
         extensions: ["*", ".js", ".jsx"]

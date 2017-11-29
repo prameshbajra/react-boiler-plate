@@ -5,8 +5,7 @@ class MainComponent extends React.Component {
     render() {
         return (
             <div>
-                <br /><br />
-                <h1 className="text-center">Welcome to React Boiler Plate .. <br />Get Started</h1>
+                <h1 className="text-center">React Boiler Plate</h1>
             </div>
         );
     }
