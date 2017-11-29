@@ -1,6 +1,18 @@
-# react-down-timer
+# A basic boiler plate for React ...
 
-Timer app using React.
+Boilerplate for react. 
+
+> It's modular, it's clear, it's concise ...
+
+## What does it contain?
+
+- React (Obviously)
+
+- Foundation (Working out of the box).
+
+- PreConfigured **Karma** for testing.
+
+- PreConfigured **Webpack** for easy start.
 
 ### How to use ?
 
